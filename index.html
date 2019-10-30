@@ -6,23 +6,229 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-  <nav>
-    <a class="logo-device"><img src="img/logo-device.svg" width="163" height="35"
-                                                  alt="Логотип Device"></a>
+<header class="container">
+  <nav class="header-nav">
+    <a class="header-logo-device"><img src="img/logo-device.svg" width="163" height="35"
+                                       alt="Логотип Device"></a>
 
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="header-search-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" placeholder="Поиск по сайту" name="search" id="search">
       <label class="visually-hidden" for="search">Поиск по сайту</label>
       <button type="submit">Найти</button>
     </form>
-    <ul>
+    <ul class="header-user-list">
+      <li>
+        <a href="#">
+          <img src="img/icon-user.svg" width="13" height="12" alt="иконка юзера">
+          <span>Войти</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/icon-compare.svg" width="10" height="10" alt="иконка сравнить">
+          <span>Сравнить</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="img/icon-cart.svg" width="12" height="12" alt="иконка корзины">
+          <span>Корзина</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="header-menu-list">
+      <li class="header-catalog-drop">
+        <a class="header-catalog-drop-link" href="#">Каталог товаров</a>
+        <div class="header-catalog-drop-list">
+          <ul class="catalog-drop-list">
+            <li class="catalog-drop-item"><a href="#">Виртуальная реальность</a></li>
+            <li class="catalog-drop-item"><a href="catalog.html">Моноподы для селфи</a></li>
+            <li class="catalog-drop-item"><a href="#">Экшн-камеры</a></li>
+          </ul>
+          <ul class="catalog-drop-list">
+            <li class="catalog-drop-item"><a href="#">Фитнес-браслеты</a></li>
+            <li class="catalog-drop-item"><a href="#">Умные часы</a></li>
+          </ul>
+          <ul class="catalog-drop-list">
+            <li class="catalog-drop-item"><a href="#">Квадрокоптеры</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <ul class="header-info-menu-list">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="slide container">
+  </div>
+  <section class="slider container">
+    <h2 class="visually-hidden">Слайдер банеров с товарами-новинками</h2>
+    <!-- верстаем потом-->
+  </section>
+
+  <section class="category container">
+    <h1 class="visually-hidden">Магазин "Device"</h1>
+    <h2 class="visually-hidden">Категории товаров</h2>
+    <ul class="category-list">
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-vr.svg" width="97" height="55" alt="Виртуaльная реальность">
+          </div>
+          <h3>Виртуaльная реальность</h3>
+        </a>
+      </li>
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-monopods.svg" width="86" height="117" alt="Моноподы для селфи">
+          </div>
+          <h3>Моноподы<br>для селфи</h3>
+        </a>
+      </li>
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-action-cameras.svg" width="71" height="87" alt="Экшн-камеры">
+          </div>
+          <h3>Экшн-камеры</h3>
+        </a>
+      </li>
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-fitness-bracelets.svg" width="107" height="65" alt="Фитнес-браслеты">
+          </div>
+          <h3>Фитнес браслеты</h3>
+        </a>
+      </li>
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-smart-watch.svg" width="56" height="98" alt="Умные часы">
+          </div>
+          <h3>Умные часы</h3>
+        </a>
+      </li>
+      <li class="category-item">
+        <a href="#" class="category-link">
+          <div class="category-icon">
+            <img src="img/category-quadrocopters.svg" width="132" height="69" alt="Квадрокоптеры">
+          </div>
+          <h3>Квадрокоптеры</h3>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="services">
+    <div class="services-info-all container">
+      <h2 class="visually-hidden">Услуги и сервис</h2>
+      <ul class="services-list active">
+        <li class="services-list-items"><a class="services-list-button button active">Доставка</a></li>
+        <li class="services-list-items"><a class="services-list-button button" href="#">Гарантия</a></li>
+        <li class="services-list-items"><a class="services-list-button button" href="#">Кредит</a></li>
+      </ul>
+      <ul class="services-info">
+        <li class="services-info-items active">
+          <h2>Доставка</h2>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+            заработаем, поднимая его на ваш этаж.</p>
+          <div class="services-img-delivery">
+            <img src="img/pic-delivery.svg" width="136" height="164" alt="Курьер">
+          </div>
+        </li>
+        <li class="services-info-items">
+          <h2>Гарантия</h2>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.</p>
+          <img src="img/pic-warranty.svg" width="171" height="194" alt="Гарантия">
+        </li>
+        <li class="services-info-items">
+          <h2>Кредит</h2>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+            кредита. Выгодные для нашего банка, разумеется.</p>
+          <img src="img/pic-credit.svg" width="156" height="186" alt="Гарантия">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="supplier-company container">
+    <h2 class="visually-hidden">Наши поставщики</h2>
+    <ul class="supplier-company-list">
+      <li class="supplier-company-item">
+        <a href="#" title="Перейти на сайт компании Dji" target="_blank">
+          <img src="img/logo-dji.jpg" width="260" height="100" alt="Логотип dji">
+        </a>
+      </li>
+      <li>
+        <a href="#" title="Перейти на сайт компании Dji" target="_blank">
+          <img src="img/logo-sp-gadget.jpg" width="260" height="100" alt="Логотип SPA Gadgets">
+        </a>
+      </li>
+      <li>
+        <a href="#" title="Перейти на сайт компании SP-Gadget" target="_blank">
+          <img src="img/logo-gopro.jpg" width="260" height="100" alt="Логотип Go Pro">
+        </a>
+      </li>
+      <li>
+        <a href="#" title="Перейти на сайт компании Vive" target="_blank">
+          <img src="img/logo-vive.jpg" width="260" height="100" alt="Логотип Vive">
+        </a>
+      </li>
+    </ul>
+  </section>
+  <div class="info-columns container">
+    <section class="info-about-us">
+      <h2>О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными
+        компаниями:
+      </p>
+      <ul class="transport-companies-list">
+        <li><a href="#" title="Перейти на сайт компании Деловые Линии" target="_blank">Деловые Линии</a></li>
+        <li><a href="#" title="Перейти на сайт компании Автотрейдинг" target="_blank">Автотрейдинг</a></li>
+        <li><a href="#" title="Перейти на сайт компании ЖелДорЭкспедиция" target="_blank">ЖелДорЭкспедиция</a></li>
+      </ul>
+      <a class="info-columns-button button" href="#" title="Перейти на старницу информацией о нас">Подробнее о нас</a>
+    </section>
+    <section class="info-contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
+        Всякое
+        бывает.</p>
+      <figure>
+        <a href="#" title="Просмотреть на google-картах"><img src="img/map.jpg" width="560" height="222"
+                                                              alt="Наш адрес: г. Москва, ул.Строителей, 15"></a>
+        <figcaption class="visually-hidden">Карта расположения магазина "Devise"</figcaption>
+      </figure>
+      <a class="info-columns-button button" href="#" title="Открыть форму отправки сообщений">Напишите нам</a>
+    </section>
+  </div>
+</main>
+<!-- футер-->
+<footer>
+  <div class="footer-user-info container">
+    <a class="logo-device">
+      <svg xmlns="http://www.w3.org/2000/svg" width="163" height="35">
+        <path fill="#ffc600"
+          d="M-.151.702v33.6h13.532a15.72 15.72 0 0011.72-4.824 16.458 16.458 0 004.712-11.976 16.458 16.458 0 00-4.712-11.976A15.723 15.723 0 0013.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 016.5 2.568 9.407 9.407 0 012.489 6.84 9.406 9.406 0 01-2.489 6.84 8.642 8.642 0 01-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.506 15.506 0 006.041-5.688l-6.67-3.84a7.482 7.482 0 01-3.165 3.024 9.87 9.87 0 01-4.664 1.1 9.595 9.595 0 01-7.177-2.736 9.909 9.909 0 01-2.682-7.248 9.909 9.909 0 012.682-7.248 9.595 9.595 0 017.177-2.736 9.897 9.897 0 014.639 1.08 7.592 7.592 0 013.19 3.048l6.67-3.84a15.873 15.873 0 00-6.09-5.688 17.42 17.42 0 00-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476a17.52 17.52 0 008.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952z"
+          data-name="-e-logo" fill-rule="evenodd"/>
+      </svg>
+    </a>
+    <ul class="footer-user-menu">
       <li>
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
-            <path fill="#272525"
+            <path fill="#ffc600"
                   d="M.03 12h12.94A6.22 6.22 0 008.3 6.46 3.47 3.47 0 006.5 0a3.49 3.49 0 00-1.8 6.46C2.1 7.16.2 9.36.03 12z"/>
           </svg>
           <span>Войти</span>
@@ -31,7 +237,7 @@
       <li>
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-            <path d="M8 2h1.98v8H8zM0 3h1.98v7H0zM4 0h2v10H4z"/>
+            <path fill="#ffc600" d="M8 2h1.98v8H8zM0 3h1.98v7H0zM4 0h2v10H4z"/>
           </svg>
           <span>Сравнить</span>
         </a>
@@ -39,230 +245,51 @@
       <li>
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
-            <path
-              d="M11.86 3.02a.43.43 0 00-.32-.16H9.23V4.1c0 .56-.49 1.02-1.09 1.02-.59 0-1.07-.46-1.07-1.02V2.86H4.9V4.1c0 .56-.49 1.02-1.08 1.02-.6 0-1.08-.46-1.08-1.02V2.86H.44a.43.43 0 00-.33.16.47.47 0 00-.1.35l.77 7.14c.01.8.64 1.45 1.41 1.45h7.6c.77 0 1.4-.65 1.4-1.45l.78-7.13a.48.48 0 00-.1-.36z"/>
-            <path
-              d="M3.83 4.5c.24 0 .43-.19.43-.41V1.84c0-.63.67-1.02 1.3-1.02h1.08c.65 0 1.07.4 1.07 1.02v2.25c0 .23.2.4.44.4.23 0 .43-.18.43-.4V1.84C8.58.77 7.76 0 6.64 0H5.56C4.36 0 3.4.83 3.4 1.84v2.25c0 .23.2.4.43.4z"/>
+            <path fill="#ffc600"
+                  d="M11.86 3.02a.43.43 0 00-.32-.16H9.23V4.1c0 .56-.49 1.02-1.09 1.02-.59 0-1.07-.46-1.07-1.02V2.86H4.9V4.1c0 .56-.49 1.02-1.08 1.02-.6 0-1.08-.46-1.08-1.02V2.86H.44a.43.43 0 00-.33.16.47.47 0 00-.1.35l.77 7.14c.01.8.64 1.45 1.41 1.45h7.6c.77 0 1.4-.65 1.4-1.45l.78-7.13a.48.48 0 00-.1-.36z"/>
+            <path fill="#ffc600"
+                  d="M3.83 4.5c.24 0 .43-.19.43-.41V1.84c0-.63.67-1.02 1.3-1.02h1.08c.65 0 1.07.4 1.07 1.02v2.25c0 .23.2.4.44.4.23 0 .43-.18.43-.4V1.84C8.58.77 7.76 0 6.64 0H5.56C4.36 0 3.4.83 3.4 1.84v2.25c0 .23.2.4.43.4z"/>
           </svg>
           <span>Корзина</span>
         </a>
       </li>
     </ul>
-    <ul>
-      <li>
-        <a href="#">Каталог товаров</a>
-      </li>
-      <li>
-        <div class="catalog-drop-menu">
-          <ul class="catalog-drop-list">
-            <li class="catalog-drop-item"><a href="#">Виртуальная реальность</a></li>
-            <li class="catalog-drop-item"><a href="catalog.html">Моноподы для селфи</a></li>
-            <li class="catalog-drop-item"><a href="#">Экшн-камеры</a></li>
-            <li class="catalog-drop-item"><a href="#">Фитнес-браслеты</a></li>
-            <li class="catalog-drop-item"><a href="#">Умные часы</a></li>
-            <li class="catalog-drop-item"><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
+  </div>
+  <div class="footer-services-info container">
+    <p>г. Москва, ул. Строителей, 15</p>
+    <ul class="footer-services-menu">
+      <li><a href="#" title="Перейти на страницу с условиями доставки">Доставка</a></li>
+      <li><a href="#" title="Перейти на страницу с условиями гарантиями">Гарантия</a></li>
+      <li><a href="#" title="Перейти на страницу с контаками">Контакты</a></li>
     </ul>
-  </nav>
-</header>
-<main>
-
-  <section class="slider">
-    <h2 class="visually-hidden">Слайдер банеров с товарами-новинками</h2>
-    <!-- верстаем потом-->
-  </section>
-
-  <section class="category">
-    <h1 class="visually-hidden">Магазин "Device"</h1>
-    <h2 class="visually-hidden">Категории товаров</h2>
-    <ul class="category-list">
-      <li class="category-item">
-        <a href="#" class="category-link">
-          <div class="category-icon">
-            <img src="img/category-vr.svg" width="86" height="117" alt="Виртульная реальность">
-          </div>
-          <h3>Виртульная реальность</h3>
-        </a>
-      </li>
-      <li class="category-item">
-        <a href="#" class="category-link">
-          <div class="category-icon">
-            <img src="img/category-monopods.svg" width="160" height="160" alt="Моноподы для селфи">
-          </div>
-          <h3>Моноподы для селфи</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="category-icon">
-            <img src="img/category-action-cameras.svg" width="160" height="160" alt="Экшн-камеры">
-          </div>
-          <h3>Экшн-камеры</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="category-icon">
-            <img src="img/category-fitness-bracelets.svg" width="160" height="160" alt="Фитнес-браслеты">
-          </div>
-          <h3>Экшн-камеры</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="category-icon">
-            <img src="img/category-smart-watch.svg" width="160" height="160" alt="Умные часы">
-          </div>
-          <h3>Экшн-камеры</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="category-icon">
-            <img src="img/category-quadrocopters.svg" width="160" height="160" alt="Квадрокоптеры">
-          </div>
-          <h3>Экшн-камеры</h3>
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <section class="services">
-    <h2 class="visually-hidden">Услуги и сервис</h2>
-    <div class="services-nav">
-      <ul class="services-list">
-        <li>
-          <button type="button">Доставка</button>
-        </li>
-        <li>
-          <button type="button">Гарантия</button>
-        </li>
-        <li>
-          <button type="button">Кредит</button>
-        </li>
-      </ul>
-    </div>
-    <div class="services-info">
-      <h2>Доставка</h2>
-      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-        поднимая его на ваш этаж.</p>
-      <img src="img/pic-delivery.svg" width="136" height="164" alt="Курьер">
-    </div>
-  </section>
-  <section class="supplier-company">
-    <h2 class="visually-hidden">Наши поставщики</h2>
-    <ul><!--цвет иконок же можно поменять в сss?-->
-      <li><a href="#" title="Перейти на сайт компании Dji" target="_blank"><img src="img/logo-dji.jpg" width="260"
-                                                                                height="100"
-                                                                                alt="Логотип dji"></a></li>
-      <li><a href="#" title="Перейти на сайт компании Dji" target="_blank"><img src="img/logo-sp-gadget.jpg"
-                                                                                width="260" height="100"
-                                                                                alt="Логотип SPA Gadgets"></a></li>
-      <li><a href="#" title="Перейти на сайт компании SP-Gadget" target="_blank"><img src="img/logo-gopro.jpg"
-                                                                                      width="260"
-                                                                                      height="100"
-                                                                                      alt="Логотип Go Pro"></a></li>
-      <li><a href="#" title="Перейти на сайт компании Vive" target="_blank"><img src="img/logo-vive.jpg" width="260"
-                                                                                 height="100"
-                                                                                 alt="Логотип Vive"></a></li>
-    </ul>
-  </section>
-  <section class="info-about-us">
-    <h2>О нас</h2>
-    <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-    <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
-      компаниями:</p>
-    <p>
-    <ul>
-      <li><a href="#" title="Перейти на сайт компании Деловые Линии" target="_blank">Деловые Линии</a></li>
-      <li><a href="#" title="Перейти на сайт компании Автотрейдинг" target="_blank">Автотрейдинг</a></li>
-      <li><a href="#" title="Перейти на сайт компании ЖелДорЭкспедиция" target="_blank">ЖелДорЭкспедиция</a></li>
-    </ul>
-    <a href="#" title="Перейти на старницу информацией о нас">Подробнее о нас</a>
-  </section>
-  <section class="contacts">
-    <h2>Контакты</h2>
-    <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
-      Всякое
-      бывает.</p>
-    <figure>
-      <a href="#" title="Просмотреть на google-картах"><img src="img/map.jpg" width="560" height="222"
-                                                            alt="Наш адрес: г. Москва, ул.Строителей, 15"></a>
-      <figcaption class="visually-hidden">Карта расположения магазина "Devise"</figcaption>
-    </figure>
-    <a href="#" title="Открыть форму отправки сообщений">Напишите нам</a>
-  </section>
-</main>
-<footer>
-  <a class="logo-device"><img src="img/logo-device.svg" width="163" height="35" alt="Логотип Device"></a>
-  <!--смена цвета в сss-->
-  <ul>
-    <li>
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
-          <path fill="#ffc600"
-                d="M.03 12h12.94A6.22 6.22 0 008.3 6.46 3.47 3.47 0 006.5 0a3.49 3.49 0 00-1.8 6.46C2.1 7.16.2 9.36.03 12z"/>
-        </svg>
-        <span>Войти</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-          <path fill="#ffc600" d="M8 2h1.98v8H8zM0 3h1.98v7H0zM4 0h2v10H4z"/>
-        </svg>
-        <span>Сравнить</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
-          <path fill="#ffc600"
-                d="M11.86 3.02a.43.43 0 00-.32-.16H9.23V4.1c0 .56-.49 1.02-1.09 1.02-.59 0-1.07-.46-1.07-1.02V2.86H4.9V4.1c0 .56-.49 1.02-1.08 1.02-.6 0-1.08-.46-1.08-1.02V2.86H.44a.43.43 0 00-.33.16.47.47 0 00-.1.35l.77 7.14c.01.8.64 1.45 1.41 1.45h7.6c.77 0 1.4-.65 1.4-1.45l.78-7.13a.48.48 0 00-.1-.36z"/>
-          <path fill="#ffc600"
-                d="M3.83 4.5c.24 0 .43-.19.43-.41V1.84c0-.63.67-1.02 1.3-1.02h1.08c.65 0 1.07.4 1.07 1.02v2.25c0 .23.2.4.44.4.23 0 .43-.18.43-.4V1.84C8.58.77 7.76 0 6.64 0H5.56C4.36 0 3.4.83 3.4 1.84v2.25c0 .23.2.4.43.4z"/>
-        </svg>
-        <span>Корзина</span>
-      </a>
-    </li>
-  </ul>
-  <p>г. Москва, ул. Строителей, 15</p>
-  <ul>
-    <li><a href="#" title="Перейти на страницу с условиями доставки">Доставка</a></li>
-    <li><a href="#" title="Перейти на страницу с условиями гарантиями">Гарантия</a></li>
-    <li><a href="#" title="Перейти на страницу с контаками">Контакты</a></li>
-  </ul>
-  <p>Тел.: +7 (495) 495-95-95</p>
-  <div>
+    <a class="footer-tel-link" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+  </div>
+  <div class="footer-links-info container">
     <h3 class="visually-hidden">Социальные сети</h3>
-    <ul class="social-list">
-      <li class="social-item">
-        <a href="https://www.facebook.com/htmlacademy" title="наш facebook" aria-label="Ссылка на фэйсбук htmlacademy"
-           target="_blank"></a>
+    <ul class="footer-social-list">
+      <li class="footer-social-item">
+        <a href="https://www.facebook.com/htmlacademy" title="наш facebook" target="_blank">
+          <img src="img/icon-social-facebook.svg" width="32" height="32" alt="Фэйсбук htmlacademy">
+        </a>
       </li>
-      <li class="social-item">
-        <a href="https://www.instagram.com/htmlacademy" title="наш instagram"
-           aria-label="Ссылка на инстаграм htmlacademy" target="_blank">
+      <li class="footer-social-item">
+        <a href="https://www.instagram.com/htmlacademy" title="наш instagram" target="_blank">
           <img src="img/icon-social-instagram.svg" width="32" height="32" alt="Инстаграм htmlacademy">
         </a>
       </li>
-      <li class="social-item">
-        <a href="https://www.twitter.com/htmlacademy" title="наш twitter" aria-label="Ссылка на твиттер htmlacademy"
-           target="_blank">
-         <img src="img/icon-social-twitter.svg" width="32" height="32" alt="Твиттер htmlacademy">
+      <li class="footer-social-item">
+        <a href="https://www.twitter.com/htmlacademy" title="наш twitter" target="_blank">
+          <img src="img/icon-social-twitter.svg" width="32" height="32" alt="Твиттер htmlacademy">
         </a>
       </li>
     </ul>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт разрабочика" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
+        <title>Сайт разработчика</title>
+        <path fill="#ffc600" d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.05-.03V1.42L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.41 8.02 4.83.04.02 8.15-4.87-.02-5.18 3.42-2.03v10.02l-11.55 6.87-11.54-6.87v-9.85z"/>
+      </svg>
+    </a>
   </div>
-  <a href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт разрабочика"
-     aria-label="Ссылка на сайт разработчика - htmlacademy" target="_blank">
-    <img src="img/logo-html-academy.svg" width="27" height="34" alt="Ссылка на сайт разработчика - htmlacademy">
-  </a>
 </footer>
 <!-- модальное окно которое я потом какнибуь подключу или это будет старница..еще не знаю как это делать)-->
 <section class="modal-write-us">
