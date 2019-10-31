@@ -36,7 +36,7 @@ body {
   margin: 0;
   padding: 0;
   /*background: url("../img/device-index-open.jpg");*/
-  background: url("../img/device-index.jpg");
+  /* background: url("../img/device-index.jpg");*/
 
   /*font-family: "Open_sans", "Arial", sans-serif;
   font-size: 15px;
@@ -58,17 +58,17 @@ img {
 }
 
 .button {
-  display: inline-block;
   font: inherit;
   text-align: center;
-  color: red;
   vertical-align: middle;
   text-transform: uppercase;
-
   background-color: #ffffff;
   border: none;
 }
 
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 .container {
   display: flex;
   width: 1160px;
@@ -104,9 +104,8 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   padding: 34px 50px 20px 60px;
   margin-top: 40px;
-  /*background-color: #f7e296;*/
+  background-color: #f7e296;
   padding-bottom: 169px;
-  outline: blueviolet 1px solid;
 }
 
 /*ЛОГО*/
@@ -149,7 +148,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header-user-list a {
-  font-family: "Open_Sans";
+  font-family: "Open_Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 49px;
@@ -176,7 +175,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   list-style: none;
-  outline: deepskyblue 1px solid;
 }
 
 .header-info-menu-list {
@@ -272,7 +270,7 @@ input[type="radio"].visually-hidden {
 .catalog-drop-list a {
   width: 124px;
   color: #000000;
-  font-family: "open_sans";
+  font-family: "open_sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 36px;
@@ -432,7 +430,7 @@ input[type="radio"].visually-hidden {
 .services-info-items h2 {
   margin: 0;
   margin-bottom: 41px;
-  font-family: "gilroy";
+  font-family: "gilroy", "Arial", sans-serif;;
   font-size: 47px;
   line-height: 29px;
   font-weight: 700;
@@ -442,7 +440,7 @@ input[type="radio"].visually-hidden {
 .services-info-items p {
   width: 450px;
   margin: 0;
-  font-family: "open_sans";
+  font-family: "open_sans", "Arial", sans-serif;;
   font-size: 15px;
   font-weight: 300;
   line-height: 30px;
@@ -480,6 +478,31 @@ input[type="radio"].visually-hidden {
   width: 260px;
   height: 100px;
 }
+/*ЭФФЕКТ ПОЯВЛЕНИЯ*/
+.supplier-company-item a {
+  position: relative;
+  display: inline-block;
+  width: 260px;
+  height: 100px;
+  vertical-align: top;
+}
+
+.supplier-company-item a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.supplier-company-item a:hover::after {
+  opacity: 1;
+}
+
+.supplier-company-item a:hover img {
+  opacity: 0;
+}
+.supplier-company-item a:hover::after {
+  background: url("../img/logo-dji-hover.jpg") no-repeat center;
+}
+
 
 /*ИНФОРМАЦИОННЫЕ КОЛОНКИ*/
 .info-columns {
@@ -520,7 +543,7 @@ input[type="radio"].visually-hidden {
 .info-columns h2 {
   margin: 0;
   margin-bottom: 43px;
-  font-family: "gilroy";
+  font-family: "gilroy", "Arial", sans-serif;;
   font-size: 47px;
   font-weight: 700;
   line-height: 48px;
@@ -534,7 +557,7 @@ input[type="radio"].visually-hidden {
   padding: 0px;
   padding-right: 50px;
   margin-bottom: 40px;
-  font-family: "open_Sans";
+  font-family: "open_Sans", "Arial", sans-serif;;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -564,7 +587,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 50%;
   color: #000000;
-  font-family: "Gilroy";
+  font-family: "gilroy", "Arial", sans-serif;;
   font-size: 16px;
   font-weight: 700;
   padding: 10px 0 11px 0;
@@ -579,7 +602,7 @@ input[type="radio"].visually-hidden {
 .info-columns-button {
   align-self: flex-start;
   color: #000000;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;;
   font-size: 18px;
   font-weight: 700;
   line-height: 40px;
@@ -622,7 +645,7 @@ footer {
   padding: 16px 43px;
   color: #ffffff;
 
-  font-family: "Open_Sans";
+  font-family: "Open_Sans", "Arial", sans-serif;;
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 0.15px;
@@ -653,7 +676,7 @@ footer {
 .footer-services-menu a {
   display: block;
   color: #ffffff;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -664,7 +687,7 @@ footer {
 
 .footer-tel-link,
 .footer-services-info p {
-  font-family: "Open_Sans";
+  font-family: "Open_Sans", "Arial", sans-serif;;
   font-size: 15px;
   color: #ffffff;
 }
@@ -706,4 +729,154 @@ footer {
   width: 80px;
   height: 7px;
   background-color: #ffc600;
+}
+
+/*МОДАЛЬНОЕ ОКНО*/
+/*ФОРМА*/
+.modal-write-us {
+  visibility: hidden;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 960px;
+  height: 553px;
+  padding-top: 91px;
+  padding-right: 100px;
+  padding-bottom: 79px;
+  padding-left: 100px;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  background: url("../img/form.jpg");
+  background-color: #ffffff;
+}
+
+.modal-form {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-write-us {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+label {
+  color: #000000;
+  font-family: "Gilroy", "Arial", sans-serif;;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  padding-bottom: 9px;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  font-family: "Open_Sans", "Arial", sans-serif;;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+#username {
+  width: 360px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgba(5, 5, 5, 0.1);
+  /*background-color: #f2f2f2;*/
+  border: none;
+  margin-right: auto;
+}
+
+#useremail {
+  width: 360px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgba(5, 5, 5, 0.1);
+  /*background-color: #f2f2f2;*/
+  border: none;
+}
+
+textarea {
+  max-height: 155px;
+  padding: 13px 20px;
+  resize: none;
+  height: 156px;
+  background-color: rgba(5, 5, 5, 0.1);
+  /*background-color: #f2f2f2;*/
+  border: none;
+}
+
+.form-write-us div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 22px;
+}
+
+.form-username {
+  width: 360px;
+  box-sizing: border-box;
+}
+
+.form-usermail {
+  width: 360px;
+  box-sizing: border-box;
+}
+
+.form-userletter {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*КНОПКИ*/
+.close-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  border: solid transparent;
+  border-radius: 50%;
+ background-color: #ffc600;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.form-submit-botton {
+  width: 200px;
+  height: 40px;
+  margin-top: auto;
+  margin-right: auto;
+  outline: #ffc600 1px solid;
+  background-color: transparent;
+  color: #000000;
+  font-family: "gilroy", "Arial", sans-serif;;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  vertical-align: center;
+}
+
+/*КАРТА*/
+.modal-mup {
+  display: block;
+  visibility: hidden;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 960px;
+  height: 553px;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  background-color: #ffffff;
 }
